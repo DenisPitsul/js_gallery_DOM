@@ -3,7 +3,7 @@
 const thumbsListElement = document.getElementById('thumbs');
 const largeImgElement = document.getElementById('largeImg');
 
-thumbsListElement.addEventListener('click', (e) => {
+thumbsListElement.addEventListener('click', e => {
   e.preventDefault();
 
   const link = e.target.closest('.list-item__link');
@@ -11,8 +11,6 @@ thumbsListElement.addEventListener('click', (e) => {
   if (!link) {
     return;
   }
-
-  e.preventDefault();
 
   largeImgElement.src = link.href;
 });
